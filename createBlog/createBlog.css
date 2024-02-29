@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
+
+.bHero {
+  position: relative;
+  background-image: url(../img/laptop-screen-blog.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: calc(40px + 4vmin);
+    color: #fff;
+    font-family: Protest Revolution;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.navbar {
+  z-index: 100;
+}
+
+.c {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0;
+  gap: 20px;
+
+  .head,
+  .head1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 150px;
+
+    & > input,
+    select {
+      min-width: 315px;
+      /* margin: 0 auto; */
+    }
+  }
+
+  .head1 {
+    gap: 10px;
+  }
+
+  .typeHed {
+    min-width: 315px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    .type {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 300px;
+      padding-right: 20px;
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+    }
+  }
+
+  .description {
+    width: 77%;
+    /* padding: 0 150px; */
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .des {
+      resize: none;
+      width: 100%;
+      min-width: 315px;
+      padding: 10px;
+      font-size: 1.1rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  .imgCont {
+    width: 100%;
+    padding: 0 150px;
+
+    label {
+      display: flex;
+      align-items: center;
+
+      input {
+        display: none;
+      }
+
+      img {
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      p {
+        cursor: pointer;
+      }
+    }
+  }
+
+  footer {
+    width: 77%;
+    display: flex;
+    /* padding: 0 150px; */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 975px) {
+  .head {
+    flex-direction: column;
+    gap: 20px;
+
+    & > input,
+    select {
+      max-width: 500px;
+      min-width: 315px;
+    }
+  }
+
+  .head1 {
+    flex-direction: column;
+    gap: 20px;
+
+    & .typeHed {
+      max-width: 500px;
+      min-width: 315px;
+    }
+  }
+}

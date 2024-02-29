@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Blogee</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/BLOGEE-LOGO.jpg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <div id="load">
+      <span class="loading loading-spinner text-info loading-lg"></span>
+    </div>
+
+    <div id="loadForm" class="noneForm">
+      <span class="loading loading-spinner text-info loading-lg"></span>
+    </div>
+
+    <h1>Blogee</h1>
+
+    <div class="wrapper">
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form class="forms">
+          <div class="input-box">
+            <input
+              type="text"
+              class="emailLogin"
+              autocomplete="off"
+              id="loginEmail"
+            />
+            <i class="bx bxs-envelope"></i>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input
+              id="loginPassword"
+              type="password"
+              class="passwordLogin"
+              autocomplete="off"
+            />
+            <i class="bx bxs-lock-alt"></i>
+            <label>Password</label>
+          </div>
+          <button type="submit" class="btn" id="loginBtn">Login</button>
+          <div class="register-link">
+            <p>Don't have an account?<a style="cursor: pointer">Register</a></p>
+          </div>
+        </form>
+        <button
+          class="btn googleBtn"
+          title="Continue With Google"
+          id="googleBtn"
+        >
+          <img src="img/google-icon.png" width="20" alt="Google" />
+          Continue with Google
+        </button>
+      </div>
+
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form class="forms" action="index.html">
+          <label class="labelProfile">
+            <input type="file" id="file" />
+
+            <img
+              src="./img/profile.jpg"
+              title="Change Image"
+              alt="Preview"
+              id="previewImg"
+            />
+          </label>
+
+          <div class="input-box">
+            <input
+              type="text"
+              class="userNameReg"
+              id="userNameReg"
+              autocomplete="off"
+            />
+            <i class="bx bxs-user"></i>
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              class="emailLoginR"
+              id="emailLoginR"
+              autocomplete="off"
+            />
+            <i class="bx bxs-envelope"></i>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              class="passwordLogin"
+              id="passwordLoginR"
+              autocomplete="off"
+            />
+            <i class="bx bxs-lock-alt"></i>
+            <label>Password</label>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn btnR">
+            Register
+          </button>
+          <div class="login-link">
+            <p>Already have an account?<a style="cursor: pointer">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <input type="checkbox" id="my_modal_6" class="modal-toggle alertCheckbox" />
+    <div class="modal" role="dialog" data-theme="dark" style="color: #fff">
+      <div class="modal-box">
+        <!-- <h3 class="font-bold text-lg" >Error</h3> -->
+        <p class="py-4" id="alertMess"></p>
+        <div class="modal-action">
+          <label for="my_modal_6" class="btn">Ok</label>
+        </div>
+      </div>
+    </div>
+
+    <input
+      type="checkbox"
+      id="my_modal_6"
+      class="modal-toggle alertCheckboxLink"
+    />
+    <div
+      class="modal"
+      role="dialog"
+      data-theme="dark"
+      style="color: #fff; z-index: 6000"
+    >
+      <div class="modal-box">
+        <!-- <h3 class="font-bold text-lg" >Error</h3> -->
+        <p class="py-4" id="alertMessLink"></p>
+        <div class="modal-action justify-between">
+          <label for="my_modal_6" class="btn" id="cancelForLink" title="Cancel"
+            >Cancel</label
+          >
+          <label for="my_modal_6" class="btn" id="okForLink" title="Ok"
+            >Ok</label
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+    <script src="./globaljs.js"></script>
+  </body>
+</html>

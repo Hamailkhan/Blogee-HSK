@@ -1,0 +1,202 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.blogCont {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  .cont {
+    width: 1000px;
+    min-width: 100px;
+    min-height: 10vh;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    padding-top: 10px;
+    gap: 10px;
+
+    .blogName {
+      font-size: calc(20px + 2vmin);
+      font-weight: 600;
+      text-transform: capitalize;
+      width: 100%;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    .description {
+      width: 100%;
+      height: auto;
+      font-size: 1.1rem;
+      word-wrap: break-word;
+      text-align: center;
+    }
+
+    .image {
+      min-width: 200px;
+      min-height: 200px;
+      width: fit-content;
+      height: fit-content;
+      padding: 0 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 5px;
+
+      .publisher {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.commentContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  .comments {
+    width: 1000px;
+    height: 80vh;
+    /* overflow-y: scroll; */
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header {
+      background: #fff;
+      border-bottom: 2px solid #1d232a;
+      border-top: 2px solid #1d232a;
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+
+        input {
+          width: 100%;
+        }
+
+        .send {
+          height: max-content;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .allComments {
+      width: 100%;
+      min-height: 40vh;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 10px;
+      padding-bottom: 100px;
+
+      .user {
+        border: 2px solid #1d232a;
+        position: relative;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 20vh;
+        overflow: hidden;
+        gap: 15px;
+        padding: 10px;
+
+        .top {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .like {
+            width: max-content;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding-right: 5px;
+          }
+
+          .userInfo {
+            width: 200px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .middle {
+          width: 100%;
+
+          padding: 10px;
+        }
+
+        .bottom {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}

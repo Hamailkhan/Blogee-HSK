@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/BLOGEE-LOGO.jpg" />
+    <title>Blogee | Create | HSK</title>
+    <link rel="stylesheet" href="createBlog.css" />
+    <link rel="stylesheet" href="../global.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="load">
+      <span class="loading loading-spinner text-info loading-lg"></span>
+    </div>
+
+    <div id="loadForm" class="noneForm">
+      <span class="loading loading-spinner text-info loading-lg"></span>
+    </div>
+
+    <!-- header start -->
+    <div class="navbar fixed bg-base-100" data-theme="dark">
+      <div class="flex-1">
+        <a href="../BlogHome/blogHome.html" class="btn btn-ghost"
+          ><img src="../img/BLOGEE-ICON.png" width="100" alt="blogee"
+        /></a>
+      </div>
+      <div class="flex-none">
+        <div class="dropdown dropdown-end">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle avatar"
+          >
+            <div class="w-10 rounded-full">
+              <img id="img" src="../img/profile.jpg" />
+            </div>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a href="../BlogHome/blogHome.html" class="justify-between">
+                Home
+              </a>
+              <a href="../Profile/profile.html" class="justify-between">
+                Profile
+              </a>
+            </li>
+            <li id="logout"><a>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- header end -->
+
+    <div class="bHero">
+      <h1 class="logo">CREATE BLOG</h1>
+    </div>
+
+    <div class="c" data-theme="light">
+      <div class="head">
+        <input
+          id="title"
+          type="text"
+          placeholder="Enter Title"
+          class="input input-bordered w-full max-w-xs"
+          autocomplete="off"
+        />
+        <select class="select select-bordered w-full max-w-xs">
+          <option disabled selected>Select Category</option>
+          <option value="HMTL">HTML</option>
+          <option value="JS">JS</option>
+          <option value="CSS">CSS</option>
+          <option value="REACT">REACT</option>
+          <option value="SCSS">SCSS</option>
+        </select>
+      </div>
+
+      <div class="head1">
+        <div class="typeHed">
+          <h3>Select Type</h3>
+          <form class="type">
+            <label>
+              <input
+                type="radio"
+                name="radio-7"
+                class="radio radio-info"
+                checked
+              />
+              <h2>Blog</h2>
+            </label>
+
+            <label>
+              <input type="radio" name="radio-7" class="radio radio-info" />
+              <h2>Question</h2>
+            </label>
+          </form>
+        </div>
+        <div class="status">
+          <div class="typeHed">
+            <h3>Select Status</h3>
+            <form class="type">
+              <label>
+                <input
+                  type="radio"
+                  name="radio-7"
+                  class="radio radio-info"
+                  checked
+                />
+                <h2>Active</h2>
+              </label>
+
+              <label>
+                <input type="radio" name="radio-7" class="radio radio-info" />
+                <h2>In Active</h2>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="description">
+        <h2>Description</h2>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          class="des textarea textarea-bordered textarea-lg"
+          autocomplete="off"
+        ></textarea>
+      </div>
+
+      <div class="imgCont">
+        <label>
+          <input type="file" id="FileInput" />
+          <p class="btn btn-outline" id="uploadImgBtn" title="Upload Image">
+            Upload Image
+          </p>
+          <img
+            src="../img/laptop-screen-blog.jpg"
+            title="Change Image"
+            width="500"
+            alt="Preview"
+            id="previewImg"
+            style="display: none"
+          />
+        </label>
+      </div>
+
+      <input
+        type="checkbox"
+        id="my_modal_6"
+        class="modal-toggle alertCheckbox"
+      />
+      <div class="modal" role="dialog" data-theme="dark" style="color: #fff">
+        <div class="modal-box">
+          <!-- <h3 class="font-bold text-lg" >Error</h3> -->
+          <p class="py-4" id="alertMess"></p>
+          <div class="modal-action">
+            <label for="my_modal_6" class="btn">Ok</label>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <button class="btn btn-outline" id="save">Save</button>
+        <button class="btn btn-outline" id="cancel">Cancel</button>
+      </footer>
+    </div>
+
+    <!-- footer start -->
+    <footer class="footer p-10 bg-base-200 text-base-content" data-theme="dark">
+      <aside>
+        <img src="../img/BLOGEE-ICON.png" width="150" alt="blogee" />
+        <p>
+          Where Blogs Speak and Questions Thrive.<br />Providing reliable tech
+          since 2024
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
+    <!-- footer end -->
+
+    <script src="createBlog.js" type="module"></script>
+    <script src="../globaljs.js"></script>
+  </body>
+</html>
