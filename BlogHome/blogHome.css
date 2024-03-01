@@ -64,7 +64,10 @@ figure img {
 }
 
 @media (hover: hover) {
-  .co figure img:hover {
+  .co figure.widthGreater img:hover {
     transform: scale(0.95);
+  }
+  .co figure img:hover {
+    transform: scale(1.2);
   }
 }
