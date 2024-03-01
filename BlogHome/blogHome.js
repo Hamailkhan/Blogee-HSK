@@ -136,8 +136,7 @@ onChildAdded(ref(rdb, "blogs/"), (data) => {
        </button>
      </div>
    </div>
- </div>;
-
+ </div>
 `;
 
     card.insertAdjacentHTML("afterbegin", cardHtml);
