@@ -37,6 +37,10 @@
   }
 }
 
+#cursor {
+  cursor: default;
+}
+
 #loadForm {
   position: fixed;
   top: 0;

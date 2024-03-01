@@ -59,7 +59,6 @@ onChildAdded(ref(rdb, "blogs/"), (data) => {
     <figure class="widthGreater">
     <img
             src="${blogPicture}"
-            alt="Movie"
           />
         </figure>
         <div class="card-body">
@@ -73,11 +72,10 @@ onChildAdded(ref(rdb, "blogs/"), (data) => {
                 <div
                 tabindex="0"
                 role="button"
-                class="avatar">
+                class="avatar" id="cursor">
                 <div class="w-10 rounded-full">
                 <img
                 id="pImg"
-                alt="Tailwind CSS Navbar component"
                 src="${BlogProfile}"
                 />
                 </div>
@@ -109,7 +107,7 @@ onChildAdded(ref(rdb, "blogs/"), (data) => {
     let cardHtml = `
  <div class="card w-96 bg-base-100 shadow-xl co" id="card">
    <figure>
-     <img src="${blogPicture}" alt="Shoes" />
+     <img src="${blogPicture}"/>
    </figure>
    <div class="card-body">
      <h2 class="card-title">${titl}</h2>
@@ -117,11 +115,10 @@ onChildAdded(ref(rdb, "blogs/"), (data) => {
      <div class="card-actions justify-between items-center pub">
        <div class="pubData">
          <span class="pubN">
-           <div tabindex="0" role="button" class="avatar">
+           <div tabindex="0" role="button" class="avatar" >
              <div class="w-10 rounded-full">
                <img
                  id="pImg"
-                 alt="Tailwind CSS Navbar component"
                  src="${BlogProfile}"
                />
              </div>
