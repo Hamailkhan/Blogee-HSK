@@ -13,7 +13,8 @@ body {
 }
 
 .profile {
-  min-width: 300px;
+  min-width: 250px;
+  width: 300px;
   position: relative;
   display: flex;
   flex-direction: column;

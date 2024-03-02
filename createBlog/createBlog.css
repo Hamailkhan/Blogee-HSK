@@ -57,8 +57,7 @@
 
     & > input,
     select {
-      min-width: 315px;
-      /* margin: 0 auto; */
+      min-width: 250px;
     }
   }
 
@@ -67,7 +66,8 @@
   }
 
   .typeHed {
-    min-width: 315px;
+    width: 300px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -80,7 +80,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 300px;
+      width: 100%;
       padding-right: 20px;
 
       label {
@@ -94,7 +94,6 @@
 
   .description {
     width: 77%;
-    /* padding: 0 150px; */
 
     h2 {
       font-size: 1.5rem;
@@ -104,8 +103,7 @@
     .des {
       resize: none;
       width: 100%;
-      min-width: 315px;
-      padding: 10px;
+      /* min-width: 315px; */
       font-size: 1.1rem;
       letter-spacing: 0.1rem;
     }
