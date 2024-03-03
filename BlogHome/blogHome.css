@@ -10,8 +10,8 @@
 }
 
 .co {
-  /* width: 90%; */
-  /* min-width: 90%; */
+  width: 90%;
+  min-width: 90%;
   max-width: 1000px;
   height: auto;
   border: 1px solid #000;
