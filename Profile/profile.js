@@ -59,7 +59,7 @@ fileInput.addEventListener("change", ({ target }) => {
   };
 
   if (imgIsOk) {
-    const fileName = `${Date.now()}_${fileData.name}`;
+    const fileName = auth.currentUser.uid;
 
     const storageRef = ref(storage, "userProfle/" + fileName);
 
